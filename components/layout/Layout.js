@@ -3,6 +3,7 @@ import {customTheme} from "./theme";
 import Head from "next/head";
 import Header from "./Header";
 import {styled} from "@mui/system";
+import Footer from "./Footer";
 
 const CustomContainer = styled(Container)(({ theme }) => ({
     minHeight: "100vh",
@@ -14,14 +15,6 @@ const CustomContainer = styled(Container)(({ theme }) => ({
     alignItems: "center"
 }));
 
-const CustomFooter = styled('footer')(({theme}) => ({
-    display: "flex",
-    flex: 1,
-    padding: "2rem 0",
-    borderTop: "1px solid #eaeaea",
-    justifyContent: "center",
-    alignItems: "center"
-}));
 
 function Layout(props) {
 
@@ -39,11 +32,7 @@ function Layout(props) {
                 <CustomContainer>
                     {children}
                 </CustomContainer>
-                <CustomFooter>
-                    <Typography>
-                        All rights reserved. Next Amazona.
-                    </Typography>
-                </CustomFooter>
+                <Footer/>
             </ThemeProvider>
         </div>
     );
